@@ -1,4 +1,4 @@
-# interesting_css
+# 简介
 本项目用以收集个人所见过的趣味css的demo，亦作分享用。
 
 # Demos
