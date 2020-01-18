@@ -3,32 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<link rel="stylesheet" href="../common/reset.css">
 	<style>
 		.answer-bar {
-			display: inline-block;
-			margin-bottom: 5px;
-			width: 90px;
-			height: 34px;
-			background: #4dc86f;
-			border-radius: 4px;
-			font-size: 14px;
-			text-align: center;
-			color: #fff;
-			line-height: 34px;
-			cursor: pointer;
-			margin-right: 25px;
-			position: relative;
-		}
-		.answer-bar::after {
-			content: "";
-			position: absolute;
-			left: 73px;
-			bottom: 7px;
 			display: block;
-			width: 35px;
-			height: 40px;
+			width: 70px;
+			height: 80px;
 			background: url(https://iknowpc.bdimg.com/static/question-new/widget/ask/replyer/img/wld-exp-btn-hb.f91c70d.png) no-repeat;
 			background-size: 100% 100%;
+			cursor: pointer;
 			animation-name: upAnimation;
 			transform-origin: center bottom;
 			animation-duration: 2s;
@@ -95,6 +78,6 @@
 	</style>
 </head>
 <body>
-	<div class="answer-bar"></div>
+	<div class="answer-bar fixed-center"></div>
 </body>
 </html>

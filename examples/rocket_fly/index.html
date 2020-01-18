@@ -3,17 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<link rel="stylesheet" href="../common/reset.css">
 	<style>
 		.rocket-con {
-			position:fixed;
 			background:url('./rocket_top.png');
 			width:150px;
 			height:175px;
 			cursor:pointer;
 			z-index:99;
-			bottom:0;
-			left:50%;
-			margin-left:490px;
 		}
 		.fly {
 			animation:fly .4s steps(1) infinite;
@@ -29,7 +26,7 @@
 	</style>
 </head>
 <body>
-	<div class="rocket-con"></div>
+	<div class="rocket-con fixed-center"></div>
 	<script>
 		var rocketElm = document.querySelector('.rocket-con');
 		rocketElm.addEventListener('mouseover', function() {
