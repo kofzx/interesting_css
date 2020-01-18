@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.rocket-con {
+			position:fixed;
+			background:url('./rocket_top.png');
+			width:150px;
+			height:175px;
+			cursor:pointer;
+			z-index:99;
+			bottom:0;
+			left:50%;
+			margin-left:490px;
+		}
+		.fly {
+			animation:fly .4s steps(1) infinite;
+			background:url('./rocket_frame.png');
+		}
+		@keyframes fly {
+			0%{background-position-x:0}
+			25%{background-position-x:-150px}
+			50%{background-position-x:-300px}
+			75%{background-position-x:-450px}
+			to{background-position-x:-600px}
+		}
+	</style>
+</head>
+<body>
+	<div class="rocket-con"></div>
+	<script>
+		var rocketElm = document.querySelector('.rocket-con');
+		rocketElm.addEventListener('mouseover', function() {
+			this.classList.add('fly');
+		}, false);
+		rocketElm.addEventListener('mouseout', function() {
+			this.classList.remove('fly');
+		}, false);
+	</script>
+</body>
+</html>
