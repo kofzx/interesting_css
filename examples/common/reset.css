@@ -2,6 +2,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+ol, ul {
+    list-style: none;
+}
 .fixed-center {
 	position: fixed !important;
 	top: 50%;
