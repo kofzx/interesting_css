@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../common/reset.css">
+	<style>
+		.wrapper {
+		    height: 203px;
+		    width: 207px;
+		    position: relative;
+		    transition: all 0.3s ease 0.3s;
+		   	margin: 100px auto;
+		}
+		.wrapper .icon-bg {
+			width: 96px;
+		    height: 105px;
+		    background: url('./icon-bg.png') no-repeat 0 0;
+		    background-size: 100%;
+		    position: absolute;
+		    top: 35px;
+		    left: 59px;
+		    transition: all 0.4s ease 0.12s;
+		}
+		.wrapper .wrap-icon {
+			position: absolute;
+		    width: 100%;
+		    text-align: center;
+		    left: 0px;
+		    top: 70px;
+		    transition: all 0.3s ease 0.12s;
+		}
+		.wrapper .wrap-icon img.icon {
+			width: 36px;
+		    height: 34px;
+		    margin-left: 10px;
+		}
+		.wrapper p.text {
+			width: 100%;
+		    text-align: center;
+		    font-size: 24px;
+		    color: rgba(39,48,69,1);
+		    line-height: 24px;
+		    position: absolute;
+		    top: 152px;
+		    left: 0;
+		    transition: all 0.1s ease 0.12s;
+		}
+		.wrapper p.text-detail {
+			width: 170px;
+		    font-size: 14px;
+		    color: rgba(89,101,128,1);
+		    line-height: 22px;
+		    position: absolute;
+		    top: 100px;
+		    left: 20px;
+		    opacity: 0;
+		    transition: all 0.18s ease 0.12s;
+		}
+		/* hover态 */
+		.wrapper:hover {
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.06);
+  			border-radius: 3px;
+		}
+		.wrapper:hover .icon-bg {
+			opacity: 0;
+		  	transform: scale(2);
+		}
+		.wrapper:hover .wrap-icon {
+			top: 34px;
+		}
+		.wrapper:hover p.text-detail {
+			opacity: 1;
+		}
+		.wrapper:hover p.text {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="icon-bg"></div>
+		<div class="wrap-icon">
+        	<img src="./icon.png" class="icon" alt="">
+      	</div>
+      	<p class="text">自定义弹窗</p>
+      	<p class="text-detail">可对咨询窗口Logo、聊天窗名称、主题颜色、窗口关闭弹窗时间进行自定义设置</p>
+	</div>
+</body>
+</html>

@@ -9,3 +9,5 @@
 [仿app原生按钮点击效果](https://kofzx.github.io/interesting_css/examples/ripple/index.html)
 
 [小舟水浪动画](https://kofzx.github.io/interesting_css/examples/boat_animation/index.html)
+
+[七陌鼠标移上效果](https://kofzx.github.io/interesting_css/examples/7moor_mouse_hover_css/index.html)
