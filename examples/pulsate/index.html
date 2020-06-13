@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../common/reset.css">
+	<style>
+		.main-box {
+			width: 65px;
+			height: 65px;
+			background: rgb(224, 90, 76);
+			border-radius: 50%;
+			border: 8px solid white;
+		}
+		.pulse {
+			width: 100%;
+			height: 100%;
+			background: rgb(224, 90, 76);
+			border-radius: 50%;
+			position: absolute;
+			animation: pulsate 6s linear infinite;
+		}
+		.pulse.-second {
+			animation-delay: 1.5s;
+		}
+		.pulse.-third {
+			animation-delay: 3s;
+		}
+		.pulse.-fourth {
+			animation-delay: 4.5s;
+		}
+		@keyframes pulsate {
+			0% {
+			    -webkit-transform: scale(1);
+			    transform: scale(1);
+			    opacity: 0;
+			}
+			35% {
+			    opacity: .2;
+			}
+			70% {
+			    opacity: .05;
+			}
+			100% {
+			    -webkit-transform: scale(5);
+			    transform: scale(5);
+			    opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="main-box fixed-center">
+		<div class="pulse"></div>
+		<div class="pulse -second"></div>
+		<div class="pulse -third"></div>
+		<div class="pulse -fourth"></div>
+	</div>
+</body>
+</html>

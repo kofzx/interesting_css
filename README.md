@@ -11,3 +11,5 @@
 [小舟水浪动画](https://kofzx.github.io/interesting_css/examples/boat_animation/index.html)
 
 [七陌鼠标移上效果](https://kofzx.github.io/interesting_css/examples/7moor_mouse_hover_css/index.html)
+
+[脉动波纹效果](https://kofzx.github.io/interesting_css/examples/pulsate/index.html)
