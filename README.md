@@ -13,3 +13,5 @@
 [七陌鼠标移上效果](https://kofzx.github.io/interesting_css/examples/7moor_mouse_hover_css/index.html)
 
 [脉动波纹效果](https://kofzx.github.io/interesting_css/examples/pulsate/index.html)
+
+[剑与远征娜可露露购买界面动画](https://kofzx.github.io/interesting_css/examples/afk_arena_lulu/index.html)
