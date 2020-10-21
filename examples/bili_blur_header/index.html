@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../common/reset.css">
+	<style>
+		.bili-banner {
+			box-sizing: border-box;
+			margin: 0 auto;
+		    position: relative;
+		    z-index: 0;
+		    min-height: 155px;
+		    height: 9.375vw;
+		    min-width: 999px;
+		    background-color: #f9f9f9;
+		    display: -ms-flexbox;
+		    display: flex;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		    background-repeat: no-repeat;
+		    background-position: center 0;
+		    background-size: cover;
+		}
+		.animated-banner {
+			box-sizing: border-box;
+			position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    overflow: hidden;
+		}
+		.animated-banner > .layer {
+			box-sizing: border-box;
+			position: absolute;
+		    left: 0;
+		    top: 0;
+		    height: 100%;
+		    width: 100%;
+		    display: -ms-flexbox;
+		    display: flex;
+		    -ms-flex-align: center;
+		    align-items: center;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		}
+		.animated-banner > .layer > img {
+			box-sizing: border-box;
+			vertical-align: middle;
+    		border-style: none;
+    		transition: transform 0.4s;
+		}
+	</style>
+</head>
+<body>
+	<div id="biliBanner" class="bili-banner">
+		<div class="animated-banner">
+			<div class="layer">
+				<img src="https://i0.hdslb.com/bfs/vc/8e084d67aa18ed9c42dce043e06e16b79cbb50ef.png" data-height="250" data-width="3000" height="309" width="3716" style="filter: blur(4px); transform: translate(0px, 0px) rotate(0deg);">
+			</div>
+			<div class="layer">
+				<img src="https://i0.hdslb.com/bfs/vc/082e39ef757826401ef82da818310d42e05bc2de.png" data-height="275" data-width="3000" height="204" width="2229" style="transform: translate(0px, 0px) rotate(0deg); filter: blur(0px);">
+			</div>
+			<div class="layer">
+				<img src="https://i0.hdslb.com/bfs/vc/dbd5c17c4315714de9e4ee119694d2e9efaf9639.png" data-height="250" data-width="3000" height="309" width="3716" style="transform: translate(-50px, 0px) rotate(0deg); filter: blur(1px);">
+			</div>
+			<div class="layer">
+				<img src="https://i0.hdslb.com/bfs/vc/cd9be0a2716adbae85fd899259381c4b2c2893c7.png" data-height="250" data-width="3000" height="185" width="2229" style="transform: translate(0px, 7px) rotate(0deg); filter: blur(4px);">
+			</div>
+			<div class="layer">
+				<img src="https://i0.hdslb.com/bfs/vc/88537437a7916ecde847fa46652b44fbd3cbbb06.png" data-height="275" data-width="3000" height="204" width="2229" style="transform: translate(0px, -3px) rotate(0deg); filter: blur(5px);">
+			</div>
+			<div class="layer">
+				<img src="https://i0.hdslb.com/bfs/vc/37d9a93baa55870506a6f3e6308e7a0c386b97c7.png" data-height="275" data-width="3000" height="221" width="2415" style="filter: blur(6px); transform: translate(0px, 0px) rotate(0deg);">
+			</div>
+		</div>
+	</div>
+	<script>
+		window.onload = function() {
+			let biliBanner = document.getElementById('biliBanner')
+			let layers = biliBanner.querySelectorAll('.layer')
+			let startX, startY, moveX, moveY, 
+				r = 1.238709677		// wrapper.clientHeight / 155
+				r = r * 0.001
+
+			biliBanner.addEventListener('mouseenter', function(event) {
+				startX = event.clientX
+				startY = event.clientY
+			})
+			biliBanner.addEventListener('mousemove', function(event) {
+				moveX = event.clientX - startX / document.documentElement.clientWidth
+				moveY = event.clientY - startY / document.documentElement.clientWidth
+				
+				let l5 = moveX > 400 ? 0 : Math.abs(5 + -10 * moveX * r)
+
+				layers[0].firstElementChild.style = `filter: blur(${Math.abs(4 + 4 * moveX * r)}px); transform: translate(0px, 0px) rotate(0deg)`
+				layers[1].firstElementChild.style = `filter: blur(${Math.abs(10 * moveX * r)}px); transform: translate(${15 * moveX * r}px, 0px) rotate(0deg)`
+				layers[2].firstElementChild.style = `filter: blur(${Math.abs(1 + -5 * moveX * r)}px); transform: translate(${(-50 + 30 * moveX) * r}px, 0px) rotate(0deg)`
+				layers[3].firstElementChild.style = `filter: blur(${Math.abs(4 + -10 * moveX * r)}px); transform: translate(${60 * moveX * r}px, ${7 * moveY * r}px) rotate(0deg)`
+				layers[4].firstElementChild.style = `filter: blur(${l5}px); transform: translate(${130 * moveX * r}px, ${-3 * moveY * r}px) rotate(0deg)`
+				layers[5].firstElementChild.style = `filter: blur(${Math.abs(6 + -6 * moveX * r)}px); transform: translate(${150 * moveX * r}px, 0px) rotate(0deg)`
+			})
+			// 重置状态
+			biliBanner.addEventListener('mouseleave', function(event) {
+				layers[0].firstElementChild.style = `filter: blur(4px); transform: translate(0px, 0px) rotate(0deg)`
+				layers[1].firstElementChild.style = `transform: translate(0px, 0px) rotate(0deg); filter: blur(0px)`
+				layers[2].firstElementChild.style = `transform: translate(-50px, 0px) rotate(0deg); filter: blur(1px)`
+				layers[3].firstElementChild.style = `transform: translate(0px, 7px) rotate(0deg); filter: blur(4px)`
+				layers[4].firstElementChild.style = `transform: translate(0px, -3px) rotate(0deg); filter: blur(5px)`
+				layers[5].firstElementChild.style = `filter: blur(6px); transform: translate(0px, 0px) rotate(0deg)`
+			})
+		}
+	</script>
+</body>
+</html>

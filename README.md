@@ -15,3 +15,5 @@
 [脉动波纹效果](https://kofzx.github.io/interesting_css/examples/pulsate/index.html)
 
 [剑与远征娜可露露购买界面动画](https://kofzx.github.io/interesting_css/examples/afk_arena_lulu/index.html)
+
+[b站头部交互动画模仿](https://kofzx.github.io/interesting_css/examples/bili_blur_header/index.html)
